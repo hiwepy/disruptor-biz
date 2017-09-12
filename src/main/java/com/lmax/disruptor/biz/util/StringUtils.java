@@ -936,9 +936,9 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 
 	/**
 	 * 
-	 * @description	：获得以 ",; \t\n"分割的字符数组
-	 * @author 		： wandalong
-	 * @date 		：Dec 17, 2015 9:07:47 PM
+	 * @description	： 获得以 ",; \t\n"分割的字符数组
+	 * @author 		： <a href="https://github.com/vindell">vindell</a>
+	 * @date 		：2017年9月12日 下午10:38:56
 	 * @param str
 	 * @return
 	 */
@@ -1429,10 +1429,9 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 
 	/**
 	 * 
-	 * @description: 圆括号()包裹
-	 * @author : wandalong
-	 * @date : 2014-4-29
-	 * @time : 下午03:11:57
+	 * @description	： 圆括号()包裹
+	 * @author 		： <a href="https://github.com/vindell">vindell</a>
+	 * @date 		：2017年9月12日 下午10:39:04
 	 * @param source
 	 * @return
 	 */
@@ -1442,10 +1441,9 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 
 	/**
 	 * 
-	 * @description: 方括号[]包裹
-	 * @author : wandalong
-	 * @date : 2014-4-29
-	 * @time : 下午03:11:57
+	 * @description	： 方括号[]包裹
+	 * @author 		： <a href="https://github.com/vindell">vindell</a>
+	 * @date 		：2017年9月12日 下午10:39:12
 	 * @param source
 	 * @return
 	 */
@@ -1471,11 +1469,10 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 
 	/**
 	 * 
-	 * @description: 将String集合元素用'包围，并拼接
-	 * @author : wandalong
-	 * @date : 2014-4-29
-	 * @time : 下午02:13:09
-	 * @param list
+	 * @description	： 将String集合元素用'包围，并拼接
+	 * @author 		： <a href="https://github.com/vindell">vindell</a>
+	 * @date 		：2017年9月12日 下午10:39:23
+	 * @param array
 	 * @param separator
 	 * @return
 	 */
@@ -1507,13 +1504,11 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 
 	/**
 	 * 
+	 * @description	：  把一个字符的非Alpha字符都去掉,String string = "1\r\n1\r\n";-->结果："11";
+	 * @author 		： <a href="https://github.com/vindell">vindell</a>
+	 * @date 		：2017年9月12日 下午10:39:33
 	 * @param string
 	 * @return
-	 * @description： 把一个字符的非Alpha字符都去掉,String string = "1\r\n1\r\n";-->结果："11";
-	 * @return: String
-	 * @method: trimToAlphaString
-	 * @author: wandalong
-	 * @version: 2010-12-15 下午09:06:02
 	 */
 	public static String trimToAlphaString(String string) {
 		if (string == null || string.length() == 0) {
@@ -1524,15 +1519,12 @@ public abstract class StringUtils extends org.apache.commons.lang3.StringUtils {
 
 	/**
 	 * 
+	 * @description	： 把一个字符的非Alpha字符都去掉，并返回每个字符的数组,String string =
+	 *               "1\r\n1\r\n";-->结果：new String[]{"1","1"};
+	 * @author 		： <a href="https://github.com/vindell">vindell</a>
+	 * @date 		：2017年9月12日 下午10:39:42
 	 * @param string
 	 * @return
-	 * @description： 把一个字符的非Alpha字符都去掉，并返回每个字符的数组,String string =
-	 *               "1\r\n1\r\n";-->结果：new String[]{"1","1"};
-	 * 
-	 * @return: String[]
-	 * @method: trimToAlphaStrings
-	 * @author: wandalong
-	 * @version: 2010-12-15 下午09:06:31
 	 */
 	public static String[] trimToAlphaStrings(String string) {
 		if (string == null || string.length() == 0) {
