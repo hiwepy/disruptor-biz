@@ -37,12 +37,11 @@ import com.lmax.disruptor.biz.util.WaitStrategys;
  * 
  * @className	： DisruptorFactoryBean
  * @description	： TODO(描述这个类的作用)
- * @author 		：万大龙（743）
- * @date		： 2017年9月6日 下午7:29:30
+ * @author 		： <a href="https://github.com/vindell">vindell</a>
+ * @date		： 2017年9月14日 上午9:54:57
  * @version 	V1.0
- * http://blog.csdn.net/a314368439/article/details/72642653?utm_source=itdadao&utm_medium=referral
+ * @see http://blog.csdn.net/a314368439/article/details/72642653?utm_source=itdadao&utm_medium=referral
  */
-
 @SuppressWarnings("unchecked")
 public class DisruptorFactoryBean implements FactoryBean<Disruptor<DisruptorEvent>>, InitializingBean {
 
