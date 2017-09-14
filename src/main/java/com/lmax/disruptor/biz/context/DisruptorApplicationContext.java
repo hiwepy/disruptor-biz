@@ -45,16 +45,7 @@ public class DisruptorApplicationContext implements ApplicationContextAware, Dis
 	}
 	
 	@Override
-	public void publishEvent(Object event) {
-		this.publishDisruptorEvent(event);
-	}
-	
-	@Override
 	public void publishEvent(DisruptorEvent event) {
-		this.publishDisruptorEvent(event);
-	}
-	
-	public void publishDisruptorEvent(Object event) {
 		disruptor.publishEvent(eventTranslator);
 		//disruptor.getRingBuffer().tryPublishEvent(eventTranslator);
 	}

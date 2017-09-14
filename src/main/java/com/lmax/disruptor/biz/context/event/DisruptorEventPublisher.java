@@ -17,7 +17,7 @@ package com.lmax.disruptor.biz.context.event;
 
 import com.lmax.disruptor.biz.event.DisruptorEvent;
 
-public interface DisruptorEventPublisher extends EventPublisher {
+public interface DisruptorEventPublisher {
 
 	void publishEvent(DisruptorEvent event);
 	
