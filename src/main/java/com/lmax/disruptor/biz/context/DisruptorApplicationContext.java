@@ -21,8 +21,9 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-import com.lmax.disruptor.EventTranslator;
+import com.lmax.disruptor.EventTranslatorOneArg;
 import com.lmax.disruptor.biz.context.event.DisruptorEventPublisher;
+import com.lmax.disruptor.biz.event.DisruptorBindEvent;
 import com.lmax.disruptor.biz.event.DisruptorEvent;
 import com.lmax.disruptor.biz.event.translator.DisruptorEventTranslator;
 import com.lmax.disruptor.dsl.Disruptor;
@@ -33,7 +34,7 @@ public class DisruptorApplicationContext implements ApplicationContextAware, Dis
 	
 	protected Disruptor<DisruptorEvent> disruptor = null;
 	
-	protected EventTranslator<DisruptorEvent> eventTranslator = null;
+	protected EventTranslatorOneArg<DisruptorEvent, Object> eventTranslator = null;
 	
 	@Override
 	public void afterPropertiesSet() throws Exception {
@@ -46,7 +47,13 @@ public class DisruptorApplicationContext implements ApplicationContextAware, Dis
 	
 	@Override
 	public void publishEvent(DisruptorEvent event) {
-		disruptor.publishEvent(eventTranslator);
+		
+		if(event instanceof DisruptorBindEvent){
+			DisruptorBindEvent bindEvent = (DisruptorBindEvent)event;
+			disruptor.publishEvent(eventTranslator, bindEvent.getBind());
+		} else {
+			disruptor.publishEvent(eventTranslator, null);
+		}
 		//disruptor.getRingBuffer().tryPublishEvent(eventTranslator);
 	}
 	
@@ -57,6 +64,22 @@ public class DisruptorApplicationContext implements ApplicationContextAware, Dis
 
 	public ApplicationContext getApplicationContext() {
 		return applicationContext;
+	}
+
+	public Disruptor<DisruptorEvent> getDisruptor() {
+		return disruptor;
+	}
+
+	public void setDisruptor(Disruptor<DisruptorEvent> disruptor) {
+		this.disruptor = disruptor;
+	}
+
+	public EventTranslatorOneArg<DisruptorEvent, Object> getEventTranslator() {
+		return eventTranslator;
+	}
+
+	public void setEventTranslator(EventTranslatorOneArg<DisruptorEvent, Object> eventTranslator) {
+		this.eventTranslator = eventTranslator;
 	}
 	
 }
