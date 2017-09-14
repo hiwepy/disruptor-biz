@@ -1,7 +1,7 @@
 package com.lmax.disruptor.biz.hooks;
 
-import com.lmax.disruptor.dsl.Disruptor;
 import com.lmax.disruptor.biz.event.DisruptorEvent;
+import com.lmax.disruptor.dsl.Disruptor;
 
 public class DisruptorShutdownHook extends Thread{
 	

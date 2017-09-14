@@ -17,6 +17,16 @@ package com.lmax.disruptor.biz.event;
 
 import java.util.EventObject;
 
+import com.lmax.disruptor.biz.util.SystemClock;
+
+/**
+ * 
+ * @className	： DisruptorEvent
+ * @description	： 事件(Event) 就是通过 Disruptor 进行交换的数据类型。
+ * @author 		： <a href="https://github.com/vindell">vindell</a>
+ * @date		： 2017年4月20日 下午9:29:21
+ * @version 	V1.0
+ */
 @SuppressWarnings("serial")
 public abstract class DisruptorEvent extends EventObject {
 
@@ -31,9 +41,9 @@ public abstract class DisruptorEvent extends EventObject {
 	 */
 	public DisruptorEvent(Object source) {
 		super(source);
-		this.timestamp = System.currentTimeMillis();
+		this.timestamp = SystemClock.now();
 	}
-
+	
 	/**
 	 * Return the system time in milliseconds when the event happened.
 	 */
