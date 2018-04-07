@@ -1,5 +1,7 @@
 #disruptor-biz
 
+## 说明
+
 ###基于 Disruptor 异步并发框架 实现的 异步事件推送、处理封装。
 
   - 1、事件推送
@@ -17,3 +19,14 @@
 - /Event-DC-Output/TagB-Output/** = smsPostHandler  该配置表示；Event = Event-DC-Output , Tags = TagB-Output , Keys = 任何类型 的事件对象交由 smsPostHandler 来处理
 
  通过这种责任链的机制，很好的实现了事件的分类异步处理；比如消息队列的消费端需要快速的消费各类消息，且每种处理实现都不相同；这时候就需要用到事件对象的分类异步处理。
+ 
+ 
+### Maven
+
+``` xml
+<dependency>
+	<groupId>com.github.vindell</groupId>
+	<artifactId>disruptor-biz</artifactId>
+	<version>${project.version}</version>
+</dependency>
+```
