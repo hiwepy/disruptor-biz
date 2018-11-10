@@ -34,15 +34,8 @@ import com.lmax.disruptor.biz.event.handler.DisruptorEventHandler;
 import com.lmax.disruptor.biz.util.WaitStrategys;
 
 /**
- * 
- * @className ： RingBufferFactoryBean
- * @description ： TODO(描述这个类的作用)
- * @author ：万大龙（743）
- * @date ： 2017年9月6日 下午7:29:30
- * @version V1.0
- *          http://blog.csdn.net/a314368439/article/details/72642653?utm_source=itdadao&utm_medium=referral
+ * http://blog.csdn.net/a314368439/article/details/72642653?utm_source=itdadao&utm_medium=referral
  */
-
 public class RingBufferFactoryBean implements FactoryBean<RingBuffer<DisruptorEvent>>, InitializingBean {
 
 	/**
