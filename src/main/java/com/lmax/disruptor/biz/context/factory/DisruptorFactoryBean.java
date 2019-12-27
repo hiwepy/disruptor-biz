@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 (https://github.com/vindell).
+ * Copyright (c) 2018 (https://github.com/hiwepy).
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -37,7 +37,7 @@ import com.lmax.disruptor.biz.util.WaitStrategys;
  * 
  * @className	： DisruptorFactoryBean
  * @description	： TODO(描述这个类的作用)
- * @author 		： <a href="https://github.com/vindell">vindell</a>
+ * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
  * @date		： 2017年9月14日 上午9:54:57
  * @version 	V1.0
  * @see http://blog.csdn.net/a314368439/article/details/72642653?utm_source=itdadao&utm_medium=referral
