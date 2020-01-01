@@ -49,14 +49,14 @@ public class Ini implements Map<String, Ini.Section> {
 
     private final Map<String, Section> sections;
 
-    /**
+    /*
      * Creates a new empty {@code Ini} instance.
      */
     public Ini() {
         this.sections = new LinkedHashMap<String, Section>();
     }
 
-    /**
+    /*
      * Creates a new {@code Ini} instance with the specified defaults.
      *
      * @param defaults the default sections and/or key-value pairs to copy into the new instance.
@@ -72,7 +72,7 @@ public class Ini implements Map<String, Ini.Section> {
         }
     }
 
-    /**
+    /*
      * Returns {@code true} if no sections have been configured, or if there are sections, but the sections themselves
      * are all empty, {@code false} otherwise.
      *
@@ -91,7 +91,7 @@ public class Ini implements Map<String, Ini.Section> {
         return true;
     }
 
-    /**
+    /*
      * Returns the names of all sections managed by this {@code Ini} instance or an empty collection if there are
      * no sections.
      *
@@ -102,7 +102,7 @@ public class Ini implements Map<String, Ini.Section> {
         return Collections.unmodifiableSet(sections.keySet());
     }
 
-    /**
+    /*
      * Returns the sections managed by this {@code Ini} instance or an empty collection if there are
      * no sections.
      *
@@ -113,7 +113,7 @@ public class Ini implements Map<String, Ini.Section> {
         return Collections.unmodifiableCollection(sections.values());
     }
 
-    /**
+    /*
      * Returns the {@link Section} with the given name or {@code null} if no section with that name exists.
      *
      * @param sectionName the name of the section to retrieve.
@@ -124,7 +124,7 @@ public class Ini implements Map<String, Ini.Section> {
         return sections.get(name);
     }
 
-    /**
+    /*
      * Ensures a section with the specified name exists, adding a new one if it does not yet exist.
      *
      * @param sectionName the name of the section to ensure existence
@@ -140,7 +140,7 @@ public class Ini implements Map<String, Ini.Section> {
         return section;
     }
 
-    /**
+    /*
      * Removes the section with the specified name and returns it, or {@code null} if the section did not exist.
      *
      * @param sectionName the name of the section to remove.
@@ -160,7 +160,7 @@ public class Ini implements Map<String, Ini.Section> {
         return name;
     }
 
-    /**
+    /*
      * Sets a name/value pair for the section with the given {@code sectionName}.  If the section does not yet exist,
      * it will be created.  If the {@code sectionName} is null or empty, the name/value pair will be placed in the
      * default (unnamed, empty string) section.
@@ -178,7 +178,7 @@ public class Ini implements Map<String, Ini.Section> {
         section.put(propertyName, propertyValue);
     }
 
-    /**
+    /*
      * Returns the value of the specified section property, or {@code null} if the section or property do not exist.
      *
      * @param sectionName  the name of the section to retrieve to acquire the property value
@@ -190,7 +190,7 @@ public class Ini implements Map<String, Ini.Section> {
         return section != null ? section.get(propertyName) : null;
     }
 
-    /**
+    /*
      * Returns the value of the specified section property, or the {@code defaultValue} if the section or
      * property do not exist.
      *
@@ -207,7 +207,7 @@ public class Ini implements Map<String, Ini.Section> {
 
   
 
-    /**
+    /*
      * Loads the specified raw INI-formatted text into this instance.
      *
      * @param iniConfig the raw INI-formatted text to load into this instance.
@@ -217,7 +217,7 @@ public class Ini implements Map<String, Ini.Section> {
         load(new Scanner(iniConfig));
     }
 
-    /**
+    /*
      * Loads the INI-formatted text backed by the given InputStream into this instance.  This implementation will
      * close the input stream after it has finished loading.  It is expected that the stream's contents are
      * UTF-8 encoded.
@@ -238,7 +238,7 @@ public class Ini implements Map<String, Ini.Section> {
         load(isr);
     }
 
-    /**
+    /*
      * Loads the INI-formatted text backed by the given Reader into this instance.  This implementation will close the
      * reader after it has finished loading.
      *
@@ -270,7 +270,7 @@ public class Ini implements Map<String, Ini.Section> {
         }
     }
 
-    /**
+    /*
      * Loads the INI-formatted text backed by the given Scanner.  This implementation will close the
      * scanner after it has finished loading.
      *
@@ -401,7 +401,7 @@ public class Ini implements Map<String, Ini.Section> {
         return Collections.unmodifiableSet(this.sections.entrySet());
     }
 
-    /**
+    /*
      * An {@code Ini.Section} is String-key-to-String-value Map, identifiable by a
      * {@link #getName() name} unique within an {@link Ini} instance.
      */

@@ -17,7 +17,7 @@ package com.lmax.disruptor.biz.config;
 
 public class DisruptorConfig {
 
-	/**
+	/*
 	 * Enable Disruptor.
 	 */
 	private boolean enabled = false;

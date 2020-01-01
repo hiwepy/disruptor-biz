@@ -15,7 +15,7 @@
  */
 package com.lmax.disruptor.biz.event.handler;
 
-/**
+/*
  * 设置一个唯一的名称
  */
 public interface Nameable {

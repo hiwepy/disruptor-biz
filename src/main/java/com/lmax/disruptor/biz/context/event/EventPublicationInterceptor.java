@@ -34,7 +34,7 @@ public class EventPublicationInterceptor
 	private DisruptorEventPublisher applicationEventPublisher;
 
 
-	/**
+	/*
 	 * Set the application event class to publish.
 	 * <p>The event class <b>must</b> have a constructor with a single
 	 * {@code Object} argument for the event source. The interceptor

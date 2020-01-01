@@ -18,7 +18,7 @@ package com.lmax.disruptor.biz.event;
 @SuppressWarnings("serial")
 public class DisruptorBindEvent extends DisruptorEvent {
 
-	/**
+	/*
 	 * 当前事件绑定的数据对象
 	 */
 	protected Object bind;

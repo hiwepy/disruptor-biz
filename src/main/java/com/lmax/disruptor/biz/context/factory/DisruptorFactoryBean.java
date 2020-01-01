@@ -33,7 +33,7 @@ import com.lmax.disruptor.biz.event.handler.DisruptorEventHandler;
 import com.lmax.disruptor.biz.hooks.DisruptorShutdownHook;
 import com.lmax.disruptor.biz.util.WaitStrategys;
 
-/**
+/*
  * 
  * @className	： DisruptorFactoryBean
  * @description	： TODO(描述这个类的作用)
@@ -45,14 +45,14 @@ import com.lmax.disruptor.biz.util.WaitStrategys;
 @SuppressWarnings("unchecked")
 public class DisruptorFactoryBean implements FactoryBean<Disruptor<DisruptorEvent>>, InitializingBean {
 
-	/**
+	/*
 	 * 决定一个消费者将如何等待生产者将Event置入Disruptor的策略。用来权衡当生产者无法将新的事件放进RingBuffer时的处理策略。
 	 * （例如 ：当生产者太快，消费者太慢，会导致生成者获取不到新的事件槽来插入新事件，则会根据该策略进行处理，默认会堵塞）
 	 */
 	private WaitStrategy waitStrategy;
 	private DisruptorConfig config;
 	private ThreadFactory threadFactory;
-	/**
+	/*
 	 * <pre>
 	 * 一个 Event 实例实际上被用作一个“数据槽”， 发布者发布前，
 	 * 先从 RingBuffer 获得一个 Event 的实例， 然后往 Event
@@ -81,7 +81,7 @@ public class DisruptorFactoryBean implements FactoryBean<Disruptor<DisruptorEven
 	//3 线程池，进行Disruptor内部的数据接收处理调用
 	//4 第四个参数ProducerType.SINGLE和ProducerType.MULTI，用来指定数据生成者有一个还是多个
 	//5 第五个参数是一种策略：WaitStrategy
-	/**
+	/*
 	 * 创建Disruptor
 	 * @param eventFactory 工厂类对象，用于创建一个个的LongEvent， LongEvent是实际的消费数据，初始化启动Disruptor的时候，Disruptor会调用该工厂方法创建一个个的消费数据实例存放到RingBuffer缓冲区里面去，创建的对象个数为ringBufferSize指定的
 	 * @param ringBufferSize RingBuffer缓冲区大小
@@ -116,7 +116,7 @@ public class DisruptorFactoryBean implements FactoryBean<Disruptor<DisruptorEven
 		// 启动
 		disruptor.start();
 		
-		/** 
+		/* 
          * 应用退出时，要调用shutdown来清理资源，关闭网络连接，从MetaQ服务器上注销自己 
          * 注意：我们建议应用在JBOSS、Tomcat等容器的退出钩子里调用shutdown方法 
          */  

@@ -19,7 +19,7 @@ import com.lmax.disruptor.biz.event.DisruptorEvent;
 
 public abstract class AbstractNameableEventHandler<T extends DisruptorEvent> implements DisruptorHandler<T>, Nameable {
 
-	/**
+	/*
 	 * 过滤器名称
 	 */
 	protected String name;

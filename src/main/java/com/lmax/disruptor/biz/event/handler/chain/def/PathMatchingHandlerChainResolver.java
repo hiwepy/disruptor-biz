@@ -28,12 +28,12 @@ import com.lmax.disruptor.biz.util.PathMatcher;
 public class PathMatchingHandlerChainResolver implements HandlerChainResolver<DisruptorEvent> {
 
 	private static final Logger log = LoggerFactory.getLogger(PathMatchingHandlerChainResolver.class);
-	/**
+	/*
 	 * handlerChain管理器
 	 */
 	private HandlerChainManager<DisruptorEvent> handlerChainManager;
 	
-	/**
+	/*
 	 * 路径匹配器
 	 */
 	private PathMatcher pathMatcher;

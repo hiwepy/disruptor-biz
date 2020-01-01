@@ -33,12 +33,12 @@ import com.lmax.disruptor.biz.event.factory.DisruptorEventThreadFactory;
 import com.lmax.disruptor.biz.event.handler.DisruptorEventHandler;
 import com.lmax.disruptor.biz.util.WaitStrategys;
 
-/**
+/*
  * http://blog.csdn.net/a314368439/article/details/72642653?utm_source=itdadao&utm_medium=referral
  */
 public class RingBufferFactoryBean implements FactoryBean<RingBuffer<DisruptorEvent>>, InitializingBean {
 
-	/**
+	/*
 	 * 决定一个消费者将如何等待生产者将Event置入Disruptor的策略。用来权衡当生产者无法将新的事件放进RingBuffer时的处理策略。
 	 * （例如 ：当生产者太快，消费者太慢，会导致生成者获取不到新的事件槽来插入新事件，则会根据该策略进行处理，默认会堵塞）
 	 */

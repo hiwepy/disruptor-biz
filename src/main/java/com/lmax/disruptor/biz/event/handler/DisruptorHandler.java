@@ -18,7 +18,7 @@ package com.lmax.disruptor.biz.event.handler;
 import com.lmax.disruptor.biz.event.DisruptorEvent;
 import com.lmax.disruptor.biz.event.handler.chain.HandlerChain;
 
-/**
+/*
  * 实现EventHandler是为了作为BatchEventProcessor的事件处理器，
  * 实现WorkHandler是为了作为WorkerPool的事件处理器
  */

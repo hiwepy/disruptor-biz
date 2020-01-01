@@ -19,7 +19,7 @@ import java.util.EventObject;
 
 import com.lmax.disruptor.biz.util.SystemClock;
 
-/**
+/*
  * 
  * @className	： DisruptorEvent
  * @description	： 事件(Event) 就是通过 Disruptor 进行交换的数据类型。
@@ -30,12 +30,12 @@ import com.lmax.disruptor.biz.util.SystemClock;
 @SuppressWarnings("serial")
 public abstract class DisruptorEvent extends EventObject {
 
-	/** System time when the event happened */
+	/* System time when the event happened */
 	private final long timestamp;
-	/** Route Expression*/
+	/* Route Expression*/
 	private String routeExpression;
 	
-	/**
+	/*
 	 * Create a new ConsumeEvent.
 	 * @param source the object on which the event initially occurred (never {@code null})
 	 */
@@ -44,7 +44,7 @@ public abstract class DisruptorEvent extends EventObject {
 		this.timestamp = SystemClock.now();
 	}
 	
-	/**
+	/*
 	 * Return the system time in milliseconds when the event happened.
 	 */
 	public final long getTimestamp() {

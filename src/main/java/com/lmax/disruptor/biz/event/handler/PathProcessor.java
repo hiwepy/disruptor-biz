@@ -17,7 +17,7 @@ package com.lmax.disruptor.biz.event.handler;
 
 import com.lmax.disruptor.biz.event.DisruptorEvent;
 
-/**
+/*
  * 给Handler设置路径
  */
 public interface PathProcessor<T extends DisruptorEvent> {

@@ -33,12 +33,12 @@ import com.lmax.disruptor.biz.event.handler.chain.def.PathMatchingHandlerChainRe
 
 public class DisruptorHandlerFactoryBean implements FactoryBean<DisruptorHandler<DisruptorEvent>> {
 
-	/**
+	/*
 	 * 处理器定义
 	 */
 	private Map<String, DisruptorHandler<DisruptorEvent>> handlers;
 	
-	/**
+	/*
 	 * 处理器链定义
 	 */
 	private Map<String, String> handlerChainDefinitionMap;

@@ -29,7 +29,7 @@ public class AbstractRouteableEventHandler<T extends DisruptorEvent> extends Abs
 
 	private static final Logger LOG = LoggerFactory.getLogger(AbstractRouteableEventHandler.class);
 
-	/**
+	/*
 	 * 用来判定使用那个HandlerChian
 	 */
 	protected HandlerChainResolver<T> handlerChainResolver;

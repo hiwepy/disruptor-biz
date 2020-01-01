@@ -21,7 +21,7 @@ import com.lmax.disruptor.biz.event.handler.chain.HandlerChain;
 import com.lmax.disruptor.biz.event.handler.chain.HandlerChainResolver;
 import com.lmax.disruptor.biz.event.handler.chain.ProxiedHandlerChain;
 
-/**
+/*
  * Disruptor 事件分发实现
  */
 public class DisruptorEventHandler extends AbstractRouteableEventHandler<DisruptorEvent> implements EventHandler<DisruptorEvent>{
