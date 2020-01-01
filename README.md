@@ -27,6 +27,6 @@
 <dependency>
 	<groupId>com.github.hiwepy</groupId>
 	<artifactId>disruptor-biz</artifactId>
-	<version>${project.version}</version>
+	<version>1.0.0.RELEASE</version>
 </dependency>
 ```
